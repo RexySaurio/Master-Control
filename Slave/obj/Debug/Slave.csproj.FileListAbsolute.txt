@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\Control\bin\Debug\Slave.exe.config
+C:\Users\Usuario\source\repos\Control\bin\Debug\Slave.exe
+C:\Users\Usuario\source\repos\Control\bin\Debug\Slave.pdb
+C:\Users\Usuario\source\repos\Control\Slave\obj\Debug\Slave.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Control\Slave\obj\Debug\Slave.exe
+C:\Users\Usuario\source\repos\Control\Slave\obj\Debug\Slave.pdb
+C:\Users\Usuario\source\repos\Control\Slave\obj\Debug\Slave.csprojAssemblyReference.cache
+C:\Users\Usuario\Downloads\Projects\Control\bin\Debug\Slave.exe.config
+C:\Users\Usuario\Downloads\Projects\Control\bin\Debug\Slave.exe
+C:\Users\Usuario\Downloads\Projects\Control\bin\Debug\Slave.pdb
+C:\Users\Usuario\Downloads\Projects\Control\Slave\obj\Debug\Slave.csprojAssemblyReference.cache
+C:\Users\Usuario\Downloads\Projects\Control\Slave\obj\Debug\Slave.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Projects\Control\Slave\obj\Debug\Slave.exe
+C:\Users\Usuario\Downloads\Projects\Control\Slave\obj\Debug\Slave.pdb

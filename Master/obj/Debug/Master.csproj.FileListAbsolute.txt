@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\Control\bin\Debug\Master.exe.config
+C:\Users\Usuario\source\repos\Control\bin\Debug\Master.exe
+C:\Users\Usuario\source\repos\Control\Master\obj\Debug\Master.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\Control\Master\obj\Debug\Master.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Control\Master\obj\Debug\Master.exe
+C:\Users\Usuario\source\repos\Control\bin\Debug\Master.pdb
+C:\Users\Usuario\source\repos\Control\Master\obj\Debug\Master.pdb
+C:\Users\Usuario\Downloads\Projects\Control\bin\Debug\Master.exe.config
+C:\Users\Usuario\Downloads\Projects\Control\bin\Debug\Master.exe
+C:\Users\Usuario\Downloads\Projects\Control\bin\Debug\Master.pdb
+C:\Users\Usuario\Downloads\Projects\Control\Master\obj\Debug\Master.csprojAssemblyReference.cache
+C:\Users\Usuario\Downloads\Projects\Control\Master\obj\Debug\Master.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Downloads\Projects\Control\Master\obj\Debug\Master.exe
+C:\Users\Usuario\Downloads\Projects\Control\Master\obj\Debug\Master.pdb
