@@ -28,7 +28,10 @@ namespace Master
     {
         console,
         exit,
-        slaves
+        slaves,
+        file,
+        off,
+        exec
     }
 
     public class MasterConsole
@@ -131,8 +134,6 @@ namespace Master
         /// <param name="cmd"> Command to execute </param>
         private static void ExecuteCommand(string cmd)
         {
-            //TODO: Add argument "-all" for send instruction in all clients connected    
-
             // Separate command in arguments
             string[] Args = cmd.Split(' ');
 
@@ -207,6 +208,32 @@ namespace Master
         {
             switch (chp)
             {
+                case CONSOLE_HELP.off:
+
+                    ConsoleMessage("===== Off command =====", CONSOLE_MSG.info);
+                    ConsoleMessage("Off slave machine", CONSOLE_MSG.info);
+                    ConsoleMessage("    -h show help", CONSOLE_MSG.info);
+                    ConsoleMessage("    -r reboot slave", CONSOLE_MSG.info);
+                    ConsoleMessage("    -s specified slave to off/reboot", CONSOLE_MSG.info);
+                    ConsoleMessage("    -all off/reboot all slave machines", CONSOLE_MSG.info);
+                    break;
+                case CONSOLE_HELP.exec:
+                    ConsoleMessage("===== Exec command =====", CONSOLE_MSG.info);
+                    ConsoleMessage("Execute windows command in client", CONSOLE_MSG.info);
+                    ConsoleMessage("Write command between [here]", CONSOLE_MSG.info);
+                    ConsoleMessage("    -h show help", CONSOLE_MSG.info);
+                    ConsoleMessage("    -s specified slave to executer command", CONSOLE_MSG.info);
+                    ConsoleMessage("    -all execute windows command in all slaves", CONSOLE_MSG.info);
+                    break;
+                case CONSOLE_HELP.file:
+                    ConsoleMessage("===== file command =====", CONSOLE_MSG.info);
+                    ConsoleMessage("send file to default slave", CONSOLE_MSG.info);
+                    ConsoleMessage("    -h show help", CONSOLE_MSG.info);
+                    ConsoleMessage("    -f file path between quote marks \"here\"", CONSOLE_MSG.info);
+                    ConsoleMessage("    -s specified slave to send", CONSOLE_MSG.info);
+                    ConsoleMessage("    -all send file to all slaves", CONSOLE_MSG.info);
+
+                    break;
                 case CONSOLE_HELP.slaves:
                     ConsoleMessage("===== slaves command =====", CONSOLE_MSG.info);
                     ConsoleMessage("show all connected slaves", CONSOLE_MSG.info);

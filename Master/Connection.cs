@@ -23,7 +23,8 @@ namespace Master
         public static Socket workSocket = null;
         public static TcpListener Listener { get { return listener; } }
         private static TcpListener listener = null;
-        public static List<TcpClient> ClientsConnected = new List<TcpClient>();
+        public static List<TcpClient> ClientsConnected { get { UpdateConnectedClients(); return ctsConn; } set { ctsConn = value; } }
+        private static List<TcpClient> ctsConn = new List<TcpClient>();
         public static TcpClient CurrentClient { get; set; }
 
         public Status()
@@ -63,11 +64,11 @@ namespace Master
 
         public static void UpdateConnectedClients()
         {
-            for (int i = 0; i < ClientsConnected.Count; i++)
+            for (int i = 0; i < ctsConn.Count; i++)
             {
-                if (!CheckConnectedClient(ClientsConnected[i].Client))
+                if (!CheckConnectedClient(ctsConn[i].Client))
                 {
-                    ClientsConnected.Remove(ClientsConnected[i]);
+                    ctsConn.Remove(ctsConn[i]);
                 }
             }
         }
@@ -165,7 +166,6 @@ namespace Master
         /// </summary>
         public static void PrintSlaves()
         {
-            Status.UpdateConnectedClients(); //! Update clients connected
 
 
             //? If there are clients connected?

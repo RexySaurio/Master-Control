@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Master
 {
@@ -59,14 +60,59 @@ namespace Master
 
     public class Check
     {
+        public static bool StringBlank(string toCheck)
+        {
+            if (string.IsNullOrEmpty(toCheck)) return true;
+
+            int count = 0;
+
+            foreach(char c in toCheck)
+            {
+                if(c != ' ')
+                {
+                    count++;
+                    break;
+                }
+            }
+
+            if(count > 0)
+                return false;
+            else
+                return true;
+        }
+
         /// <summary>
         /// Get Lenght without count spaceses
         /// </summary>
         /// <param name="arr"> Array to check </param>
         /// <returns> true/false </returns>
-        public static int FixedLenght(string[] arr)
+        public static int FixedLenght(string[] arr,string st,char excp = ' ')
         {
+
             int count = 0;
+
+            if(excp != ' ')
+            {
+                string ex = Regex.Match(st,"\"[^\"]*\"").Value;
+
+                if (!Check.StringBlank(ex))
+                {
+                    count++;
+
+                    for(int i=0;  i < arr.Length; i++)
+                    {
+                        foreach(string crt in ex.Split(' '))
+                        {
+                            if(arr[i] == crt)
+                            {
+                                arr[i] = " ";
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
             foreach(string s in arr)
             {
                 if(s != " ")
@@ -199,6 +245,31 @@ namespace Master
 
     public class Auxiliars
     {
+        /// <summary>
+        /// Get parameter by name
+        /// </summary>
+        /// <param name="arr">Arguments Array</param>
+        /// <param name="parm"> Parameter to find value </param>
+        /// <returns> Value </returns>
+        public static string GetParameter(string[] arr, string parm)
+        {
+            string toReturn = string.Empty;
+
+            for(int i=0; i < arr.Length; i++)
+            {
+                if(arr[i] == parm)
+                {
+                    if(arr.Length > i)
+                    {
+                        toReturn = arr[i + 1];
+                        break;
+                    }
+                }
+            }
+
+            return toReturn;
+        }
+
         /// <summary>
         /// Generate random ID
         /// </summary>
